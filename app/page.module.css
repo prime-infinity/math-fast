@@ -1,0 +1,14 @@
+.main {
+    padding: 20px;
+  }
+  
+  .title {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 2s ease, transform 2s ease;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
