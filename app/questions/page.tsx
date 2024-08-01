@@ -1,6 +1,10 @@
 "use client";
+<<<<<<< HEAD
 import Image from "next/image";
 import React, { useRef, useState } from "react";
+=======
+import React from "react";
+>>>>>>> main
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,13 +16,16 @@ import "./styles.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+<<<<<<< HEAD
 import { images } from "@/lib/images";
+=======
+>>>>>>> main
 
 const Questions = () => {
   return (
     <section>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={80}
         pagination={{
           clickable: true,
         }}
