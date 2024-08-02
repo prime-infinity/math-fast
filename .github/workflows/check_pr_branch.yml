@@ -1,0 +1,25 @@
+name: Check PR Target Branch
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check target branch
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const targetBranch = 'test'
+            if (context.payload.pull_request.base.ref !== targetBranch) {
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `⚠️ This pull request is targeting the \`${context.payload.pull_request.base.ref}\` branch. Please update it to target the \`${targetBranch}\` branch instead.`
+              })
+              core.setFailed(`Pull request is targeting the wrong branch (${context.payload.pull_request.base.ref} instead of ${targetBranch})`)
+            }
