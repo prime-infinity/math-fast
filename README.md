@@ -14,12 +14,18 @@ Thank you for your interest in contributing! Please follow these guidelines:
    ```
 
 3. Create a new branch from test
+
+   ```sh
    git checkout -b your-branch-name origin/test
+
+   ```
 
 4. Make your changes and commit them.
 
 5. Push your changes to your forked repository:
+   ```sh
    git push origin your-branch-name
+   ```
 
 ## Important Notes
 
