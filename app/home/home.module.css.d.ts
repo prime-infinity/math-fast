@@ -1,3 +1,4 @@
+//Ensures TypeScript recognizes the CSS module
 declare const styles: {
     readonly container: string;
     readonly rectangle: string;
