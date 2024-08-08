@@ -1,27 +1,9 @@
-import { redirect } from 'next/navigation';
+import Image from "next/image";
 
-//redirects app/page.tsx to /home
 export default function Home() {
-  redirect('/home');
+  return (
+    <>
+      <div>test branch</div>
+    </>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <>
-//       <div>test branch</div>
-//     </>
-//   );
-// }
